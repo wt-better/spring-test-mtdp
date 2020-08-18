@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 在配置了单例工厂方法之后，如果再配置scope="prototype"，返回的结果仍然是单例  -->
+    <!-- factory-method属性不能单独存在，必须配合class或者factory-bean共同存在 -->
+    <bean id="foo" class="com.mtdp.spring.bean.create.factroy_method.Car" factory-method="getInstance"/>
+</beans>

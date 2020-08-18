@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="carFactory" class="com.mtdp.spring.bean.create.factory_bean.CarFactory"/>
+
+    <!--
+         需要注意的是：如果scope是单例的情况下，即使工厂方法每次都是new对象，
+         但是多次getBean返回的对象仍然是同一个对象
+         @link com.mtdp.spring.bean.create.factory_bean.CarFactory.getCar
+     -->
+    <bean factory-bean="carFactory" factory-method="getCar" scope="prototype"/>
+</beans>

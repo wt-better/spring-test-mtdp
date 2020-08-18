@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.mtdp.spring.application_litener.application.ApplicationStartListener"/>
+    <bean class="com.mtdp.spring.application_litener.application.ApplicationRefreshListener"/>
+    <bean class="com.mtdp.spring.application_litener.application.ApplicationCloseListener"/>
+    <bean class="com.mtdp.spring.application_litener.application.ApplicationStopListener"/>
+</beans>
